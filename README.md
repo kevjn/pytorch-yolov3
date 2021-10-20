@@ -2,7 +2,7 @@
 A slimmed down implementation of yolov3 for inference using pretrained weights.
 
 ## Usage
-download coco dataset labbels and weights
+download coco dataset labels and weights
 ```bash
 wget https://raw.githubusercontent.com/pjreddie/darknet/master/data/coco.names
 wget https://pjreddie.com/media/files/yolov3.weights
