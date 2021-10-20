@@ -247,7 +247,9 @@ if __name__ == '__main__':
     import matplotlib.pyplot as plt
     fig = plt.figure()
     ax = fig.add_subplot(1, 1, 1)
+    ax.set_axis_off()
     ax.imshow(img_raw)
+    plt.subplots_adjust(top = 1, bottom = 0, right = 1, left = 0, hspace = 0, wspace = 0)
     import matplotlib.colors as mcolors
     colors = 'yrgbcmk'
 
@@ -290,7 +292,7 @@ if __name__ == '__main__':
             width = bb[2] - bb[0]
 
             # debug print
-            print(f"Label: {labels[c]}, Conf: {scores[i]:.2f}, Bbox: (anchor xy, width, height) = {xy, width, height}")
+            print(f"Label: {labels[c]}, Confidence: {scores[i]:.2f}")
 
             color = colors[c % len(colors)]
             ax.add_patch(plt.Rectangle(xy, width, height, fill=False, edgecolor=color, linewidth=2)) 
